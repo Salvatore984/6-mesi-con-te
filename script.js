@@ -1,4 +1,4 @@
-// APERTURA LETTERA SEGRETA
+// LETTERA SEGRETA PER BUSSINAH 💌
 
 function apriLettera(){
 
@@ -6,9 +6,12 @@ function apriLettera(){
 
     document.getElementById("messaggio").style.display = "block";
 
+
     setTimeout(() => {
 
+        document.getElementById("lettera").style.position = "absolute";
         document.getElementById("lettera").style.background = "transparent";
+        document.getElementById("lettera").style.zIndex = "1";
 
     }, 1000);
 
@@ -17,7 +20,7 @@ function apriLettera(){
 
 
 
-// CONTATORE TEMPO INSIEME
+// CONTATORE TEMPO INSIEME ❤️
 
 const dataInizio = new Date("2026-01-12");
 
@@ -50,12 +53,15 @@ function aggiornaTempo(){
 
 
     document.getElementById("tempo").innerHTML =
-    `${giorni} giorni ❤️ ${ore} ore ${minuti} minuti ${secondi} secondi`;
+    giorni + " giorni ❤️ " +
+    ore + " ore " +
+    minuti + " minuti " +
+    secondi + " secondi";
 
 }
 
 
 
-setInterval(aggiornaTempo,1000);
+setInterval(aggiornaTempo, 1000);
 
 aggiornaTempo();

@@ -1,0 +1,69 @@
+.lettera-overlay{
+    position:fixed;
+    inset:0;
+    background:#120b12;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+
+.busta{
+    background:#fff;
+    color:#8b1e4a;
+    width:320px;
+    padding:40px 25px;
+    border-radius:20px;
+    cursor:pointer;
+    box-shadow:0 0 40px rgba(255,255,255,0.2);
+    animation:pulsazione 2s infinite;
+}
+
+
+.cuore-lettera{
+    font-size:60px;
+}
+
+
+.busta h2{
+    margin:20px 0;
+}
+
+
+.messaggio-lettera{
+    display:none;
+    max-width:600px;
+    background:#fff;
+    color:#333;
+    padding:40px;
+    border-radius:20px;
+    line-height:1.8;
+    animation:apertura 1s ease;
+}
+
+
+.messaggio-lettera h2,
+.messaggio-lettera h3{
+    color:#8b1e4a;
+}
+
+
+@keyframes pulsazione{
+    50%{
+        transform:scale(1.05);
+    }
+}
+
+
+@keyframes apertura{
+    from{
+        opacity:0;
+        transform:scale(0.5) rotateY(90deg);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1) rotateY(0);
+    }
+}

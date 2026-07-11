@@ -1,3 +1,21 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Georgia',serif;
+}
+
+
+body{
+    background:#120b12;
+    color:white;
+    text-align:center;
+}
+
+
+
+/* LETTERA SEGRETA */
+
 .lettera-overlay{
     position:fixed;
     inset:0;
@@ -10,7 +28,7 @@
 
 
 .busta{
-    background:#fff;
+    background:white;
     color:#8b1e4a;
     width:320px;
     padding:40px 25px;
@@ -34,7 +52,7 @@
 .messaggio-lettera{
     display:none;
     max-width:600px;
-    background:#fff;
+    background:white;
     color:#333;
     padding:40px;
     border-radius:20px;
@@ -49,21 +67,164 @@
 }
 
 
+
+
+
+/* TESTATA */
+
+header{
+    padding:60px 20px;
+    background:linear-gradient(135deg,#8b1e4a,#180d18);
+}
+
+
+header h1{
+    font-size:45px;
+}
+
+
+header p{
+    margin-top:15px;
+    font-size:20px;
+}
+
+
+
+
+
+/* SEZIONI */
+
+section{
+    padding:50px 20px;
+}
+
+
+
+
+
+/* FOTO */
+
+.hero img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    margin:15px;
+    border:4px solid #e8a4c0;
+}
+
+
+.hero h2{
+    font-size:35px;
+    margin-top:25px;
+}
+
+
+
+
+
+/* CONTATORE */
+
+.counter{
+    background:#1c121d;
+}
+
+
+#tempo{
+    font-size:28px;
+    margin-top:20px;
+    color:#ffb6d2;
+}
+
+
+
+
+
+/* STORIA */
+
+.storia p{
+    max-width:700px;
+    margin:20px auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+
+
+
+
+/* MUSICA */
+
+.musica a{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 30px;
+    background:#e91e63;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+}
+
+
+
+
+
+/* FINALE */
+
+.finale{
+    background:linear-gradient(#1c121d,#8b1e4a);
+}
+
+
+footer{
+    padding:20px;
+}
+
+
+
+
+
+/* ANIMAZIONI */
+
 @keyframes pulsazione{
+
     50%{
         transform:scale(1.05);
     }
+
 }
 
 
 @keyframes apertura{
+
     from{
         opacity:0;
         transform:scale(0.5) rotateY(90deg);
     }
 
+
     to{
         opacity:1;
         transform:scale(1) rotateY(0);
     }
+
+}
+
+
+
+
+/* TELEFONO */
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:32px;
+    }
+
+
+    .hero img{
+        width:130px;
+        height:130px;
+    }
+
 }

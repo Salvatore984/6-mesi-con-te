@@ -1,9 +1,13 @@
 // LETTERA SEGRETA PER BUSSINAH 💌
+
 function apriLettera(){
 
     document.querySelector(".busta").style.display = "none";
 
     document.getElementById("messaggio").style.display = "block";
+
+}
+
 
 function chiudiLettera(){
 
@@ -19,8 +23,6 @@ function chiudiLettera(){
     }
 
 }
-
-
 // CONTATORE TEMPO INSIEME ❤️
 
 const dataInizio = new Date("2026-01-12");

@@ -59,3 +59,4 @@ function aggiornaTempo(){
 setInterval(aggiornaTempo, 1000);
 
 aggiornaTempo();
+

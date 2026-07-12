@@ -2,8 +2,6 @@
 
 function apriLettera(){
 
-    document.querySelector(".busta").style.display = "none";
-
     document.getElementById("messaggio").style.display = "block";
 
 }

@@ -10,7 +10,7 @@ function apriLettera(){
 
 function chiudiLettera(){
 
-    document.getElementById("lettera").style.display = "none";
+    document.getElementById("lettera").remove();
 
 }
 // CONTATORE TEMPO INSIEME ❤️

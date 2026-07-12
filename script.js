@@ -88,33 +88,41 @@ function creaStella(){
 
 
 setInterval(creaStella,800);
+// CUORI CHE SEGUONO IL CLICK ❤️
+
 document.addEventListener("click", function(e){
 
     const cuore = document.createElement("div");
 
-    cuore.innerHTML="❤️";
+    cuore.innerHTML = "❤️";
 
-    cuore.style.position="fixed";
-    cuore.style.left=e.clientX+"px";
-    cuore.style.top=e.clientY+"px";
-    cuore.style.fontSize="25px";
-    cuore.style.pointerEvents="none";
+    cuore.style.position = "fixed";
+    cuore.style.left = e.clientX + "px";
+    cuore.style.top = e.clientY + "px";
+    cuore.style.fontSize = "25px";
+    cuore.style.pointerEvents = "none";
+    cuore.style.zIndex = "2000";
+
 
     document.body.appendChild(cuore);
 
 
-    cuore.animate([
+    cuore.animate(
+        [
+            {
+                transform: "translateY(0)",
+                opacity: 1
+            },
+            {
+                transform: "translateY(-100px)",
+                opacity: 0
+            }
+        ],
         {
-            transform:"translateY(0)",
-            opacity:1
-        },
-        {
-            transform:"translateY(-100px)",
-            opacity:0
+            duration: 1000,
+            easing: "ease-out"
         }
-    ],{
-        duration:1000
-    });
+    );
 
 
     setTimeout(()=>{
@@ -122,6 +130,12 @@ document.addEventListener("click", function(e){
     },1000);
 
 });
+
+
+
+
+// CUORI QUANDO SI CHIUDE LA LETTERA ❤️
+
 function creaCuore(){
 
     const cuore = document.createElement("span");
@@ -133,7 +147,8 @@ function creaCuore(){
     cuore.style.bottom = "-20px";
     cuore.style.fontSize = (Math.random() * 20 + 20) + "px";
     cuore.style.pointerEvents = "none";
-    cuore.style.zIndex = "1000";
+    cuore.style.zIndex = "3000";
+
 
     document.body.appendChild(cuore);
 
@@ -161,24 +176,3 @@ function creaCuore(){
     },3000);
 
 }
-const testoDedica = document.getElementById("dedica");
-
-let testoOriginale = testoDedica.innerHTML;
-
-testoDedica.innerHTML = "";
-
-let posizione = 0;
-
-
-function scriviDedica(){
-
-    if(posizione < testoOriginale.length){
-
-        testoDedica.innerHTML += testoOriginale.charAt(posizione);
-
-        posizione++;
-
-        setTimeout(scriviDedica, 50);
-
-    }
-setTimeout(scriviDedica, 3000);

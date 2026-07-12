@@ -5,14 +5,22 @@ function apriLettera(){
 
     document.getElementById("messaggio").style.display = "block";
 
-}
-
-
 function chiudiLettera(){
 
     document.getElementById("lettera").remove();
 
+
+    for(let i = 0; i < 30; i++){
+
+        setTimeout(()=>{
+            creaCuore();
+        }, i * 100);
+
+    }
+
 }
+
+
 // CONTATORE TEMPO INSIEME ❤️
 
 const dataInizio = new Date("2026-01-12");

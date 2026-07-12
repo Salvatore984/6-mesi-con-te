@@ -1,6 +1,7 @@
 // LETTERA SEGRETA PER BUSSINAH 💌
-
 function apriLettera(){
+
+    document.querySelector(".busta").style.display = "none";
 
     document.getElementById("messaggio").style.display = "block";
 
@@ -9,9 +10,7 @@ function apriLettera(){
 
 function chiudiLettera(){
 
-    document.getElementById("messaggio").style.display = "none";
-
-    document.querySelector(".busta").style.display = "block";
+    document.getElementById("lettera").style.display = "none";
 
 }
 // CONTATORE TEMPO INSIEME ❤️

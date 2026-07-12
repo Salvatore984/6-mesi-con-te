@@ -58,4 +58,23 @@ function aggiornaTempo(){
 setInterval(aggiornaTempo, 1000);
 
 aggiornaTempo();
+function creaStella(){
 
+    const stella = document.createElement("span");
+
+    stella.innerHTML = "✨";
+
+    stella.style.left = Math.random()*100 + "vw";
+    stella.style.top = Math.random()*100 + "vh";
+
+    document.getElementById("stelle").appendChild(stella);
+
+
+    setTimeout(()=>{
+        stella.remove();
+    },5000);
+
+}
+
+
+setInterval(creaStella,800);

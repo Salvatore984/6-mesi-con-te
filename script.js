@@ -112,3 +112,42 @@ document.addEventListener("click", function(e){
     },1000);
 
 });
+function creaCuore(){
+
+    const cuore = document.createElement("span");
+
+    cuore.innerHTML = "❤️";
+
+    cuore.style.position = "fixed";
+    cuore.style.left = Math.random() * 100 + "vw";
+    cuore.style.bottom = "-20px";
+    cuore.style.fontSize = (Math.random() * 20 + 20) + "px";
+    cuore.style.pointerEvents = "none";
+    cuore.style.zIndex = "1000";
+
+    document.body.appendChild(cuore);
+
+
+    cuore.animate(
+        [
+            {
+                transform: "translateY(0) rotate(0deg)",
+                opacity: 1
+            },
+            {
+                transform: "translateY(-100vh) rotate(360deg)",
+                opacity: 0
+            }
+        ],
+        {
+            duration: 3000,
+            easing: "ease-out"
+        }
+    );
+
+
+    setTimeout(()=>{
+        cuore.remove();
+    },3000);
+
+}

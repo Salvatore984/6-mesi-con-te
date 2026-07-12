@@ -228,3 +228,28 @@ footer{
     }
 
 }
+#stelle span{
+    position:fixed;
+    color:white;
+    font-size:15px;
+    animation: comparsaStella 5s linear forwards;
+    pointer-events:none;
+}
+
+@keyframes comparsaStella{
+
+    0%{
+        opacity:0;
+        transform:scale(0);
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:scale(1.5);
+    }
+
+}

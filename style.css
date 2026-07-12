@@ -253,3 +253,61 @@ footer{
     }
 
 }
+/* MODALITÀ NOTTE ROMANTICA */
+
+.luna{
+    position:fixed;
+    top:30px;
+    right:40px;
+    font-size:70px;
+    z-index:1;
+    animation: baglioreLuna 3s infinite alternate;
+}
+
+
+@keyframes baglioreLuna{
+
+    from{
+        filter:drop-shadow(0 0 10px white);
+    }
+
+    to{
+        filter:drop-shadow(0 0 35px #ffe9a8);
+    }
+
+}
+
+
+/* effetto cielo notturno */
+
+body{
+    background:
+    radial-gradient(circle at top,#2b1735,#120b12 60%);
+}
+
+
+/* stelle più delicate */
+
+#stelle span{
+    text-shadow:0 0 10px white;
+}@keyframes movimentoLuna{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(10px);
+    }
+
+}
+.luna{
+    position:fixed;
+    top:30px;
+    right:40px;
+    font-size:70px;
+    z-index:1;
+    animation:
+    baglioreLuna 3s infinite alternate,
+    movimentoLuna 4s infinite alternate;
+}

@@ -159,3 +159,24 @@ function creaCuore(){
     },3000);
 
 }
+const testoDedica = document.getElementById("dedica");
+
+let testoOriginale = testoDedica.innerHTML;
+
+testoDedica.innerHTML = "";
+
+let posizione = 0;
+
+
+function scriviDedica(){
+
+    if(posizione < testoOriginale.length){
+
+        testoDedica.innerHTML += testoOriginale.charAt(posizione);
+
+        posizione++;
+
+        setTimeout(scriviDedica, 50);
+
+    }
+setTimeout(scriviDedica, 3000);
